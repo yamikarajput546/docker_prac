@@ -1,0 +1,11 @@
+FROM ubuntu AS S1
+RUN apt update
+CMD ["echo", "hello from first dockerfile"]
+
+
+FROM nginx AS S2
+CMD ["echo", "hello from nginx"]
+
+
+FROM node AS S3
+CMD ["echo", "hello from node"]
